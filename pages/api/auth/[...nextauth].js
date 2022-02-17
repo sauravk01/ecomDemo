@@ -5,8 +5,11 @@ export default NextAuth({
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
+      clientId:
+        process.env.GOOGLE_ID ||
+        "287956971412-l83s3sehgg4jpbuf4vda4sqc7oqual4t.apps.googleusercontent.com",
+      clientSecret:
+        process.env.GOOGLE_SECRET || "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",
       authorization: {
         params: {
           prompt: "consent",
